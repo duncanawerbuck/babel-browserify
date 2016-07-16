@@ -5,8 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/githubUser919/babel-browserify",
   "scripts": {
-    "transpile:babel": "babel client/src --out-dir dist -s",
-    "bundle:browserify": "browserify './src/main.js' -o './dist/bundle.js' -t [ babelify ]",
+    "transpile:babel": "babel src --out-dir dist -s",
+    "bundle:browserify": "browserify './dist/main.js' -o './dist/bundle.js' -t [ babelify ]",
     "build": "npm run transpile:babel && npm run bundle:browserify"
   },
   "dependencies": {},
