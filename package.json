@@ -7,14 +7,16 @@
   "scripts": {
     "transpile:babel": "babel src --out-dir dist -s",
     "bundle:browserify": "browserify './dist/main.js' -o './dist/bundle.js' -t [ babelify ]",
-    "build": "npm run transpile:babel && npm run bundle:browserify"
+    "build": "npm run clean && npm run transpile:babel && npm run bundle:browserify",
+    "clean": "rimraf dist/**"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.0.1"
+    "browserify": "^13.0.1",
+    "rimraf": "^2.4.3"
   },
   "keywords": ["babel browserify"],
   "author": "Duncan Awerbuck",
